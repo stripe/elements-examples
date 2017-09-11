@@ -11,6 +11,28 @@ function registerElements(elements, exampleName) {
   var error = form.querySelector('.error');
   var errorMessage = error.querySelector('.message');
 
+  function enableInputs() {
+    Array.prototype.forEach.call(
+      form.querySelectorAll(
+        "input[type='text'], input[type='email'], input[type='tel']"
+      ),
+      function(input) {
+        input.removeAttribute('disabled');
+      }
+    );
+  }
+
+  function disableInputs() {
+    Array.prototype.forEach.call(
+      form.querySelectorAll(
+        "input[type='text'], input[type='email'], input[type='tel']"
+      ),
+      function(input) {
+        input.setAttribute('disabled', 'true');
+      }
+    );
+  }
+
   // Listen for errors from each Element, and show error messages in the UI.
   elements.forEach(function(element) {
     element.on('change', function(event) {
@@ -31,14 +53,7 @@ function registerElements(elements, exampleName) {
     example.classList.add('submitting');
 
     // Disable all inputs.
-    Array.prototype.forEach.call(
-      form.querySelectorAll(
-        "input[type='text'], input[type='email'], input[type='tel']"
-      ),
-      function(input) {
-        input.setAttribute('disabled', 'true');
-      }
-    );
+    disableInputs();
 
     // Gather additional customer data we may have collected in our form.
     var name = form.querySelector('#' + exampleName + '-name');
@@ -61,10 +76,13 @@ function registerElements(elements, exampleName) {
       // Stop loading!
       example.classList.remove('submitting');
 
-      // If we received a token, show the token ID.
       if (result.token) {
+        // If we received a token, show the token ID.
         example.querySelector('.token').innerText = result.token.id;
         example.classList.add('submitted');
+      } else {
+        // Otherwise, un-disable inputs.
+        enableInputs();
       }
     });
   });
@@ -83,15 +101,8 @@ function registerElements(elements, exampleName) {
     // Reset error state as well.
     error.classList.remove('visible');
 
-    // Resetting does not un-disable inputs, so we still need to do that:
-    Array.prototype.forEach.call(
-      form.querySelectorAll(
-        "input[type='text'], input[type='email'], input[type='tel']"
-      ),
-      function(input) {
-        input.removeAttribute('disabled');
-      }
-    );
+    // Resetting the form does not un-disable inputs, so we need to do it separately:
+    enableInputs();
     example.classList.remove('submitted');
   });
 }
