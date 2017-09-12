@@ -12,6 +12,12 @@
   padding: 0 20px;
 }
 
+#example5-paymentRequest {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 .example.example5 fieldset {
   border: 1px solid #b5a4ed;
   padding: 15px;
@@ -31,6 +37,13 @@
 
 .example.example5 fieldset legend + * {
   clear: both;
+}
+
+.example.example5 .card-only {
+  display: block;
+}
+.example.example5 .payment-request-available {
+  display: none;
 }
 
 .example.example5 .row {

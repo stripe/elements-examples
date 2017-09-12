@@ -4,7 +4,7 @@
   <title>Elements: Build beautiful, smart checkout flows</title>
   <meta name="description" content="Build beautiful, smart checkout flows.">
 
-  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://edge-js.stripe.com/v3/"></script>
   <script src="js/index.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -232,11 +232,12 @@
             <label for="example4-amount-100">$100</label>
             <div class="highlight"></div>
           </div>
-          <div id="example4-apple-pay">
+          <div id="example4-paymentRequest">
             <!--Stripe Apple Pay element inserted here-->
           </div>
           <fieldset>
-            <legend>Pay with card</legend>
+            <legend class="card-only">Pay with card</legend>
+            <legend class="payment-request-available">Or enter card details</legend>
             <div class="container">
               <div id="example4-card"></div>
               <input type="submit" value="Donate">
@@ -271,12 +272,13 @@
 
       <!--Example 5-->
       <div class="cell example example5">
+        <div id="example5-paymentRequest">
+          <!--Stripe payment request API element inserted here-->
+        </div>
         <form>
-          <div id="example5-payment-request">
-            <!--Stripe payment request API element inserted here-->
-          </div>
           <fieldset>
-            <legend>Pay with card</legend>
+            <legend class="card-only">Pay with card</legend>
+            <legend class="payment-request-available">Or enter card details</legend>
             <div class="row">
               <div class="field">
                 <label for="example5-name">Name</label>
