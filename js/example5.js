@@ -35,7 +35,7 @@
   /**
    * Payment Request Element
    */
-  var paymentRequest = stripe._paymentRequestBeta({
+  var paymentRequest = stripe.paymentRequest({
     country: 'US',
     currency: 'USD',
     total: {
@@ -43,17 +43,17 @@
       label: 'Total',
     },
   });
-  var paymentRequestElement = elements.create('_paymentRequestBeta', {
+  var paymentRequestElement = elements.create('paymentRequestButton', {
     paymentRequest: paymentRequest,
     style: {
-      _paymentRequestBeta: {
+      paymentRequestButton: {
         theme: 'light',
       },
     },
   });
 
   paymentRequest.canMakePayment().then(function(result) {
-    if (result.available) {
+    if (result) {
       document.querySelector('.example5 .card-only').style.display = 'none';
       document.querySelector(
         '.example5 .payment-request-available'

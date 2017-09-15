@@ -32,36 +32,25 @@
   /**
    * Payment Request Element
    */
-  var paymentRequest = stripe._paymentRequestBeta({
+  var paymentRequest = stripe.paymentRequest({
     country: 'US',
     currency: 'USD',
     total: {
-      amount:
-        document.querySelector('.example4 input[name="amount"]:checked').value *
-        100,
+      amount: 2000,
       label: 'Total',
     },
   });
-  var paymentRequestElement = elements.create('_paymentRequestBeta', {
+  var paymentRequestElement = elements.create('paymentRequestButton', {
     paymentRequest: paymentRequest,
     style: {
-      _paymentRequestBeta: {
+      paymentRequestButton: {
         type: 'donate',
       },
     },
   });
 
-  document
-    .querySelector('.example4 input[name="amount"]')
-    .addEventListener('change', function(ev) {
-      if (ev.target.checked) {
-        // TODO: This API is not yet implemented.
-        // paymentRequest.update({total: ev.target.value});
-      }
-    });
-
   paymentRequest.canMakePayment().then(function(result) {
-    if (result.available) {
+    if (result) {
       document.querySelector('.example4 .card-only').style.display = 'none';
       document.querySelector(
         '.example4 .payment-request-available'
