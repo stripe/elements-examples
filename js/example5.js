@@ -43,6 +43,13 @@
       label: 'Total',
     },
   });
+  paymentRequest.on('token', function(result) {
+    var example = document.querySelector('.example5');
+    example.querySelector('.token').innerText = result.token.id;
+    example.classList.add('submitted');
+    result.complete('success');
+  });
+
   var paymentRequestElement = elements.create('paymentRequestButton', {
     paymentRequest: paymentRequest,
     style: {
