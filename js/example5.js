@@ -3,6 +3,9 @@
 
   var elements = stripe.elements();
 
+  /**
+   * Card Element
+   */
   var card = elements.create('card', {
     style: {
       iconStyle: 'solid',
@@ -28,6 +31,37 @@
     },
   });
   card.mount('#example5-card');
+
+  /**
+   * Payment Request Element
+   */
+  var paymentRequest = stripe.paymentRequest({
+    country: 'US',
+    currency: 'USD',
+    total: {
+      amount: 2500,
+      label: 'Total',
+    },
+  });
+  var paymentRequestElement = elements.create('paymentRequestButton', {
+    paymentRequest: paymentRequest,
+    style: {
+      paymentRequestButton: {
+        theme: 'light',
+      },
+    },
+  });
+
+  paymentRequest.canMakePayment().then(function(result) {
+    if (result) {
+      document.querySelector('.example5 .card-only').style.display = 'none';
+      document.querySelector(
+        '.example5 .payment-request-available'
+      ).style.display =
+        'block';
+      paymentRequestElement.mount('#example5-paymentRequest');
+    }
+  });
 
   registerElements([card], 'example5');
 })();

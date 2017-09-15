@@ -5,6 +5,9 @@
     cssSrc: 'https://rsms.me/interface/interface.css',
   });
 
+  /**
+   * Card Element
+   */
   var card = elements.create('card', {
     style: {
       base: {
@@ -23,7 +26,39 @@
       },
     },
   });
+
   card.mount('#example4-card');
 
-  registerElements([card], 'example4');
+  /**
+   * Payment Request Element
+   */
+  var paymentRequest = stripe.paymentRequest({
+    country: 'US',
+    currency: 'USD',
+    total: {
+      amount: 2000,
+      label: 'Total',
+    },
+  });
+  var paymentRequestElement = elements.create('paymentRequestButton', {
+    paymentRequest: paymentRequest,
+    style: {
+      paymentRequestButton: {
+        type: 'donate',
+      },
+    },
+  });
+
+  paymentRequest.canMakePayment().then(function(result) {
+    if (result) {
+      document.querySelector('.example4 .card-only').style.display = 'none';
+      document.querySelector(
+        '.example4 .payment-request-available'
+      ).style.display =
+        'block';
+      paymentRequestElement.mount('#example4-paymentRequest');
+    }
+  });
+
+  registerElements([card, paymentRequestElement], 'example4');
 })();

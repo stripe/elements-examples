@@ -24,79 +24,6 @@
   padding: 3px;
 }
 
-.example.example4 .amount {
-  position: relative;
-  display: -ms-flexbox;
-  display: flex;
-  height: 40px;
-}
-
-.example.example4 .amount input[type="radio"] {
-  display: none;
-}
-
-.example.example4 .amount input[type="radio"]:checked + label {
-  color: #fff;
-}
-
-.example.example4 .amount input[type="radio"]:checked + label:active {
-  color: #ffe0f5;
-}
-
-.example.example4
-  .amount
-  input[type="radio"]:nth-of-type(2):checked
-  ~ .highlight {
-  transform: translateX(100%);
-}
-
-.example.example4
-  .amount
-  input[type="radio"]:nth-of-type(3):checked
-  ~ .highlight {
-  transform: translateX(200%);
-}
-
-.example.example4
-  .amount
-  input[type="radio"]:nth-of-type(4):checked
-  ~ .highlight {
-  transform: translateX(300%);
-}
-
-.example.example4
-  .amount
-  input[type="radio"]:nth-of-type(5):checked
-  ~ .highlight {
-  transform: translateX(400%);
-}
-
-.example.example4 .amount label {
-  -ms-flex: 1;
-  flex: 1;
-  text-align: center;
-  line-height: 34px;
-  cursor: pointer;
-  color: #32325d;
-  z-index: 1;
-  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-  -webkit-tap-highlight-color: transparent;
-}
-
-.example.example4 .amount label:active {
-  color: #8898aa;
-}
-
-.example.example4 .amount .highlight {
-  position: absolute;
-  width: calc(20% - 1px);
-  height: calc(100% - 6px);
-  left: 3px;
-  border-radius: 2px;
-  background-color: #d782d9;
-  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 .example.example4 fieldset {
   border-style: none;
   padding: 5px;
@@ -113,6 +40,13 @@
   font-size: 13px;
   color: #8898aa;
   padding: 3px 10px 7px;
+}
+
+.example.example4 .card-only {
+  display: block;
+}
+.example.example4 .payment-request-available {
+  display: none;
 }
 
 .example.example4 fieldset legend + * {
@@ -136,7 +70,7 @@
   -webkit-animation: 1ms void-animation-out;
 }
 
-.example.example4 .StripeElement {
+.example.example4 #example4-card {
   padding: 10px;
   margin-bottom: 2px;
 }
