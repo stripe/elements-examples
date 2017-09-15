@@ -9,7 +9,6 @@
 }
 
 .example.example5 form {
-  padding: 0 20px;
 }
 
 #example5-paymentRequest {
@@ -21,7 +20,6 @@
 .example.example5 fieldset {
   border: 1px solid #b5a4ed;
   padding: 15px;
-  margin: 0 -20px;
   border-radius: 6px;
 }
 
