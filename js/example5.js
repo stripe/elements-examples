@@ -37,7 +37,7 @@
    */
   var paymentRequest = stripe.paymentRequest({
     country: 'US',
-    currency: 'USD',
+    currency: 'usd',
     total: {
       amount: 2500,
       label: 'Total',
