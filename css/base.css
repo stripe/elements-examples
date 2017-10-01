@@ -434,33 +434,51 @@ main > .container-lg .example * {
   padding: 0;
 }
 
-main > .container-lg .example a.source {
+main > .container-lg .example .caption {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   width: 100%;
   top: 100%;
   left: 0;
-  text-align: center;
-  padding: 15px 20px 0;
+  padding: 15px 10px 0;
   color: #aab7c4;
-  font-family: Roboto, Open Sans, Segoe UI, sans-serif;
+  font-family: Roboto, "Open Sans", "Segoe UI", sans-serif;
   font-size: 15px;
   font-weight: 500;
-  transition: color 0.1s ease-in-out;
 }
 
-main > .container-lg .example a.source:hover {
-  color: #6772e5;
+main > .container-lg .example .caption * {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-main > .container-lg .example a.source:active {
-  color: #43458b;
-}
-
-main > .container-lg .example a.source svg {
+main > .container-lg .example .caption .no-charge {
+  color: #cfd7df;
   margin-right: 10px;
 }
 
-main > .container-lg .example a.source svg path {
+main > .container-lg .example .caption a.source {
+  text-align: right;
+  color: inherit;
+  transition: color 0.1s ease-in-out;
+  margin-left: 10px;
+}
+
+main > .container-lg .example .caption a.source:hover {
+  color: #6772e5;
+}
+
+main > .container-lg .example .caption a.source:active {
+  color: #43458b;
+}
+
+main > .container-lg .example .caption a.source  svg {
+  margin-right: 10px;
+}
+
+main > .container-lg .example .caption a.source svg path {
   fill: currentColor;
 }
 
