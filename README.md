@@ -1,4 +1,4 @@
-# Elements examples
+# Stripe Elements examples
 
 [See them in action!](https://stripe.github.io/elements-examples)
 
