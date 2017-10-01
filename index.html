@@ -1,4 +1,6 @@
+<html>
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Stripe Elements: Build beautiful, smart checkout flows</title>
@@ -169,25 +171,17 @@
       <!--Example 3-->
       <div class="cell example example3">
         <form>
-          <fieldset>
-            <div class="row">
-              <input id="example3-name" class="field" type="text" placeholder="Name" required="">
-            </div>
-            <div class="row">
-              <input id="example3-email" class="field" type="email" placeholder="Email" required="">
-              <input id="example3-phone" class="field" type="tel" placeholder="Phone" required="">
-            </div>
-          </fieldset>
-          <fieldset>
-            <div class="row">
-              <div id="example3-card-number" class="field empty"></div>
-            </div>
-            <div class="row">
-              <div id="example3-card-expiry" class="field empty"></div>
-              <div id="example3-card-cvc" class="field empty"></div>
-              <div id="example3-card-postal-code" class="field empty"></div>
-            </div>
-          </fieldset>
+          <div class="fieldset">
+            <input id="example3-name" class="field" type="text" placeholder="Name" required="">
+            <input id="example3-email" class="field half-width" type="email" placeholder="Email" required="">
+            <input id="example3-phone" class="field half-width" type="tel" placeholder="Phone" required="">
+          </div>
+          <div class="fieldset">
+            <div id="example3-card-number" class="field empty"></div>
+            <div id="example3-card-expiry" class="field empty third-width"></div>
+            <div id="example3-card-cvc" class="field empty third-width"></div>
+            <div id="example3-card-postal-code" class="field empty third-width"></div>
+          </div>
           <input type="submit" value="Pay $25">
           <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
               <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"></path>
@@ -344,3 +338,4 @@
   <script src="js/example4.js"></script>
   <script src="js/example5.js"></script>
 </body>
+</html>
