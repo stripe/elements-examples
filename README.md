@@ -34,11 +34,15 @@ Example 3 shows a form that uses individual `cardNumber`, `cardExpiry`, `cardCvc
 - [JavaScript](js/example4.js)
 - [CSS](css/example4.css)
 
-Example 4 shows a form that uses the `card` Element and a custom web font.
+Example 4 shows a form that uses the `paymentRequestButton` Element to provide
+Apple Pay / Payment Request API support, as well as a `card` Element with a
+custom web font.
 
 ## Example 5
 
 - [JavaScript](js/example5.js)
 - [CSS](css/example5.css)
 
-Example 5 shows a form that uses the `card` Element and a custom icon color.
+Example 5 shows a form that uses the `paymentRequestButton` Element to provide
+Apple Pay / Payment Request API support, as well as a `card` Element with a
+custom icon color.
