@@ -68,7 +68,7 @@
   color: #cfd7df;
 }
 
-.example.example3 input {
+.example.example3 input, .example.example3 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -76,23 +76,23 @@
   border-style: none;
 }
 
-.example.example3 input:not([type="submit"]) {
+.example.example3 input {
   color: #fff;
 }
 
-.example.example3 input:not([type="submit"])::-webkit-input-placeholder {
+.example.example3 input::-webkit-input-placeholder {
   color: #9bacc8;
 }
 
-.example.example3 input:not([type="submit"])::-moz-placeholder {
+.example.example3 input::-moz-placeholder {
   color: #9bacc8;
 }
 
-.example.example3 input:not([type="submit"]):-ms-input-placeholder {
+.example.example3 input:-ms-input-placeholder {
   color: #9bacc8;
 }
 
-.example.example3 input[type="submit"] {
+.example.example3 button {
   display: block;
   width: calc(100% - 30px);
   height: 40px;
@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-.example.example3 input[type="submit"]:active {
+.example.example3 button:active {
   background-color: #f5be58;
 }
 

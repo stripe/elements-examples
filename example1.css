@@ -40,7 +40,7 @@
   white-space: nowrap;
 }
 
-.example.example1 input {
+.example.example1 input, .example.example1 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -58,35 +58,32 @@
   background: transparent !important;
 }
 
-.example.example1 input {
-  -webkit-animation: 1ms void-animation-out;
-}
-
 .example.example1 .StripeElement {
   width: 100%;
   padding: 11px 15px 11px 0;
 }
 
-.example.example1 input:not([type="submit"]) {
+.example.example1 input {
   width: 100%;
   padding: 11px 15px 11px 0;
   color: #fff;
   background-color: transparent;
+  -webkit-animation: 1ms void-animation-out;
 }
 
-.example.example1 input:not([type="submit"])::-webkit-input-placeholder {
+.example.example1 input::-webkit-input-placeholder {
   color: #87bbfd;
 }
 
-.example.example1 input:not([type="submit"])::-moz-placeholder {
+.example.example1 input::-moz-placeholder {
   color: #87bbfd;
 }
 
-.example.example1 input:not([type="submit"]):-ms-input-placeholder {
+.example.example1 input:-ms-input-placeholder {
   color: #87bbfd;
 }
 
-.example.example1 input[type="submit"] {
+.example.example1 button {
   display: block;
   width: calc(100% - 30px);
   height: 40px;
@@ -100,7 +97,7 @@
   cursor: pointer;
 }
 
-.example.example1 input[type="submit"]:active {
+.example.example1 button:active {
   background-color: #d782d9;
   box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
     inset 0 1px 0 #e298d8;
