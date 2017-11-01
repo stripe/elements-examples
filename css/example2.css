@@ -129,7 +129,7 @@
   background-color: #e25950;
 }
 
-.example.example2 input {
+.example.example2 input, .example.example2 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -147,11 +147,11 @@
   background: transparent !important;
 }
 
-.example.example2 input {
+.example.example2 input, .example.example2 button {
   -webkit-animation: 1ms void-animation-out;
 }
 
-.example.example2 input[type="submit"] {
+.example.example2 button {
   display: block;
   width: calc(100% - 30px);
   height: 40px;
@@ -164,7 +164,7 @@
   cursor: pointer;
 }
 
-.example.example2 input[type="submit"]:active {
+.example.example2 input:active {
   background-color: #159570;
 }
 

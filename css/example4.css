@@ -53,20 +53,17 @@
   clear: both;
 }
 
-.example.example4 input {
+.example.example4 input, .example.example4 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   outline: none;
   border-style: none;
+  color: #fff;
 }
 
 .example.example4 input:-webkit-autofill {
   transition: background-color 100000000s;
-  -webkit-animation: 1ms void-animation-out;
-}
-
-.example.example4 input {
   -webkit-animation: 1ms void-animation-out;
 }
 
@@ -75,23 +72,23 @@
   margin-bottom: 2px;
 }
 
-.example.example4 input:not([type="submit"]) {
-  color: #fff;
+.example.example4 input {
+  -webkit-animation: 1ms void-animation-out;
 }
 
-.example.example4 input:not([type="submit"])::-webkit-input-placeholder {
+.example.example4 input::-webkit-input-placeholder {
   color: #9bacc8;
 }
 
-.example.example4 input:not([type="submit"])::-moz-placeholder {
+.example.example4 input::-moz-placeholder {
   color: #9bacc8;
 }
 
-.example.example4 input:not([type="submit"]):-ms-input-placeholder {
+.example.example4 input:-ms-input-placeholder {
   color: #9bacc8;
 }
 
-.example.example4 input[type="submit"] {
+.example.example4 button {
   display: block;
   width: 100%;
   height: 37px;
@@ -101,7 +98,7 @@
   cursor: pointer;
 }
 
-.example.example4 input[type="submit"]:active {
+.example.example4 button:active {
   background-color: #b76ac4;
 }
 
