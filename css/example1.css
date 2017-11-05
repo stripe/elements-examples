@@ -1,0 +1,136 @@
+.example.example1 {
+  background-color: #6772e5;
+}
+
+.example.example1 * {
+  font-family: Roboto, Open Sans, Segoe UI, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.example.example1 fieldset {
+  margin: 0 15px 20px;
+  padding: 0;
+  border-style: none;
+  background-color: #7795f8;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #829fff;
+  border-radius: 4px;
+}
+
+.example.example1 .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.example.example1 .row + .row {
+  border-top: 1px solid #819efc;
+}
+
+.example.example1 label {
+  width: 15%;
+  min-width: 70px;
+  padding: 11px 0;
+  color: #c4f0ff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.example.example1 input, .example.example1 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+.example.example1 input:-webkit-autofill {
+  -webkit-text-fill-color: #fce883;
+  transition: background-color 100000000s;
+  -webkit-animation: 1ms void-animation-out;
+}
+
+.example.example1 .StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.example.example1 .StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+
+.example.example1 input {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+  color: #fff;
+  background-color: transparent;
+  -webkit-animation: 1ms void-animation-out;
+}
+
+.example.example1 input::-webkit-input-placeholder {
+  color: #87bbfd;
+}
+
+.example.example1 input::-moz-placeholder {
+  color: #87bbfd;
+}
+
+.example.example1 input:-ms-input-placeholder {
+  color: #87bbfd;
+}
+
+.example.example1 button {
+  display: block;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 40px 15px 0;
+  background-color: #f6a4eb;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #ffb9f6;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.example.example1 button:active {
+  background-color: #d782d9;
+  box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 #e298d8;
+}
+
+.example.example1 .error svg .base {
+  fill: #fff;
+}
+
+.example.example1 .error svg .glyph {
+  fill: #6772e5;
+}
+
+.example.example1 .error .message {
+  color: #fff;
+}
+
+.example.example1 .success .icon .border {
+  stroke: #87bbfd;
+}
+
+.example.example1 .success .icon .checkmark {
+  stroke: #fff;
+}
+
+.example.example1 .success .title {
+  color: #fff;
+}
+
+.example.example1 .success .message {
+  color: #9cdbff;
+}
+
+.example.example1 .success .reset path {
+  fill: #fff;
+}

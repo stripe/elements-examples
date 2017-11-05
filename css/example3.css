@@ -1,0 +1,142 @@
+.example.example3 {
+  background-color: #525f7f;
+}
+
+.example.example3 * {
+  font-family: Quicksand, Open Sans, Segoe UI, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.example.example3 .fieldset {
+  margin: 0 15px 30px;
+  padding: 0;
+  border-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.example.example3 .field {
+  padding: 10px 20px 11px;
+  background-color: #7488aa;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.example.example3 .field.half-width {
+  width: calc(50% - (5px / 2));
+}
+
+.example.example3 .field.third-width {
+  width: calc(33% - (5px / 3));
+}
+
+.example.example3 .field + .field {
+  margin-top: 6px;
+}
+
+.example.example3 .field.focus,
+.example.example3 .field:focus {
+  color: #424770;
+  background-color: #f6f9fc;
+}
+
+.example.example3 .field.invalid {
+  background-color: #fa755a;
+}
+
+.example.example3 .field.invalid.focus {
+  background-color: #f6f9fc;
+}
+
+.example.example3 .field.focus::-webkit-input-placeholder,
+.example.example3 .field:focus::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 .field.focus::-moz-placeholder,
+.example.example3 .field:focus::-moz-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 .field.focus:-ms-input-placeholder,
+.example.example3 .field:focus:-ms-input-placeholder {
+  color: #cfd7df;
+}
+
+.example.example3 input, .example.example3 button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+.example.example3 input {
+  color: #fff;
+}
+
+.example.example3 input::-webkit-input-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 input::-moz-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 input:-ms-input-placeholder {
+  color: #9bacc8;
+}
+
+.example.example3 button {
+  display: block;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 0 15px;
+  background-color: #fcd669;
+  border-radius: 20px;
+  color: #525f7f;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.example.example3 button:active {
+  background-color: #f5be58;
+}
+
+.example.example3 .error svg .base {
+  fill: #fa755a;
+}
+
+.example.example3 .error svg .glyph {
+  fill: #fff;
+}
+
+.example.example3 .error .message {
+  color: #fff;
+}
+
+.example.example3 .success .icon .border {
+  stroke: #fcd669;
+}
+
+.example.example3 .success .icon .checkmark {
+  stroke: #fff;
+}
+
+.example.example3 .success .title {
+  color: #fff;
+}
+
+.example.example3 .success .message {
+  color: #9cabc8;
+}
+
+.example.example3 .success .reset path {
+  fill: #fff;
+}
