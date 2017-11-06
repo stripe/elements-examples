@@ -621,3 +621,32 @@ main > .container-lg .example .success .reset:active {
 main > .container-lg .example .success .reset svg {
   will-change: transform;
 }
+
+footer {
+  position: relative;
+  max-width: 750px;
+  padding: 50px 20px;
+  margin: 0 auto;
+}
+
+footer a {
+  color: #aab7c4;
+  transition: color 0.1s ease-in-out;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+footer a.selected {
+  color: #6772e5;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #32325d;
+}
+
+footer a.selected:hover {
+  cursor: default;
+  color: #6772e5;
+}
