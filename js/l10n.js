@@ -7,11 +7,13 @@ document.querySelectorAll('.optionList a').forEach(function(langNode) {
   const langValue = langNode.getAttribute('data-lang');
 
   const urlPrefix = isGithubPages ? '/elements-examples/' : '/';
-  const langUrl = langValue === 'en' ? urlPrefix : (urlPrefix + langValue);
+  const langUrl = langValue === 'en' ? urlPrefix : (urlPrefix + langValue + '/');
 
   if (langUrl === window.location.pathname || langUrl === window.location.pathname + '/') {
     langNode.className += ' selected';
+    langNode.parentNode.setAttribute('aria-selected', 'true');
   } else {
     langNode.setAttribute('href', langUrl);
+    langNode.parentNode.setAttribute('aria-selected', 'false');
   }
 });
