@@ -11,7 +11,9 @@ document.querySelectorAll('.optionList a').forEach(function(langNode) {
 
   if (langUrl === window.location.pathname || langUrl === window.location.pathname + '/') {
     langNode.className += ' selected';
+    langNode.parentNode.setAttribute('aria-selected', 'true');
   } else {
     langNode.setAttribute('href', langUrl);
+    langNode.parentNode.setAttribute('aria-selected', 'false');
   }
 });
