@@ -3,7 +3,7 @@ document.querySelectorAll('footer a').forEach(function(langNode) {
   const langValue = langNode.getAttribute('data-lang');
 
   const urlPrefix = window.location.hostname === 'stripe.github.io' ? '/elements-examples/' : '/';
-  const langUrl = value === 'en' ? urlPrefix : (urlPrefix + langValue + '/');
+  const langUrl = langValue === 'en' ? urlPrefix : (urlPrefix + langValue + '/');
 
   if (langUrl === window.location.pathname) {
     langNode.className += ' selected';
