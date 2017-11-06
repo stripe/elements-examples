@@ -1,12 +1,13 @@
 // Simple localization
-document.querySelectorAll('footer a').forEach(function(lang) {
-  const value = lang.getAttribute('data-lang');
-  const prefix = window.location.hostname === 'stripe.github.io' ? '/elements-examples/' : '/';
-  const final = value === 'en' ? prefix : (prefix + value + '/');
-  const isCurrent = final === window.location.pathname;
-  if (isCurrent) {
-    lang.className += ' selected';
+document.querySelectorAll('footer a').forEach(function(langNode) {
+  const langValue = langNode.getAttribute('data-lang');
+
+  const urlPrefix = window.location.hostname === 'stripe.github.io' ? '/elements-examples/' : '/';
+  const langUrl = value === 'en' ? urlPrefix : (urlPrefix + langValue + '/');
+
+  if (langUrl === window.location.pathname) {
+    langNode.className += ' selected';
   } else {
-    lang.setAttribute('href', final);
+    langNode.setAttribute('href', langUrl);
   }
 });
