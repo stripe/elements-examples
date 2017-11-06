@@ -354,6 +354,10 @@ main > .container-lg .cell.intro {
     align-items: center;
     text-align: center;
   }
+
+  .optionList {
+    margin-left: 13px;
+  }
 }
 
 main > .container-lg .cell.intro > * {
@@ -629,7 +633,16 @@ footer {
   margin: 0 auto;
 }
 
-footer a {
+.optionList {
+  margin: 6px 0;
+}
+
+.optionList li {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.optionList a {
   color: #aab7c4;
   transition: color 0.1s ease-in-out;
   cursor: pointer;
@@ -637,16 +650,16 @@ footer a {
   line-height: 26px;
 }
 
-footer a.selected {
+.optionList a.selected {
   color: #6772e5;
   font-weight: 600;
 }
 
-footer a:hover {
+.optionList a:hover {
   color: #32325d;
 }
 
-footer a.selected:hover {
+.optionList a.selected:hover {
   cursor: default;
   color: #6772e5;
 }
