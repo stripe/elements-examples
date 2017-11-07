@@ -7,6 +7,10 @@
         cssSrc: 'https://fonts.googleapis.com/css?family=Roboto',
       },
     ],
+    // Stripe's examples are localized to specific languages, but if
+    // you wish to have Elements automatically detect your user's locale,
+    // use `locale: 'auto'` instead.
+    locale: window.__exampleLocale
   });
 
   var card = elements.create('card', {

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Stripe Elements: Build beautiful, smart checkout flows</title>
+  <title data-tid="elements_examples.meta.title">Stripe Elements: Build beautiful, smart checkout flows</title>
   <meta name="description" content="Build beautiful, smart checkout flows.">
 
   <script src="https://js.stripe.com/v3/"></script>
@@ -14,12 +14,14 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="css/base.css" data-rel-css />
-  <link rel="stylesheet" type="text/css" href="css/example1.css" data-rel-css />
-  <link rel="stylesheet" type="text/css" href="css/example2.css" data-rel-css />
-  <link rel="stylesheet" type="text/css" href="css/example3.css" data-rel-css />
-  <link rel="stylesheet" type="text/css" href="css/example4.css" data-rel-css />
-  <link rel="stylesheet" type="text/css" href="css/example5.css" data-rel-css />
+  <link rel="stylesheet" type="text/css" href="css/base.css" data-rel-css="" />
+
+  <!-- CSS for each example: -->
+  <link rel="stylesheet" type="text/css" href="css/example1.css" data-rel-css="" />
+  <link rel="stylesheet" type="text/css" href="css/example2.css" data-rel-css="" />
+  <link rel="stylesheet" type="text/css" href="css/example3.css" data-rel-css="" />
+  <link rel="stylesheet" type="text/css" href="css/example4.css" data-rel-css="" />
+  <link rel="stylesheet" type="text/css" href="css/example5.css" data-rel-css="" />
 </head>
 <body>
   <div class="globalContent">
@@ -32,6 +34,38 @@
     <section class="container-lg">
       <!--Intro-->
       <div class="cell intro">
+        <ul class="optionList" role="tablist">
+          <li role="tab">
+            <a data-lang="de">
+              Deutsch
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="en">
+              English
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="es">
+              Español
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="fr">
+              Français
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="it">
+              Italiano
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="ja">
+              日本語
+            </a>
+          </li>
+        </ul>
         <h1 data-tid="elements_examples.intro.title" class="common-SuperTitle">Stripe Elements examples</h1>
         <p data-tid="elements_examples.intro.subtitle" class="common-IntroText">Stripe Elements are pre-built rich UI components that help you build your own pixel-perfect checkout flows across desktop and&nbsp;mobile.</p>
         <p class="common-ButtonGroup">
@@ -362,10 +396,15 @@
     </main>
   </div>
 
+  <!-- Simple localization script for Stripe's examples page. -->
+  <script src="js/l10n.js" data-rel-js></script>
+
+  <!-- Scripts for each example: -->
   <script src="js/example1.js" data-rel-js></script>
   <script src="js/example2.js" data-rel-js></script>
   <script src="js/example3.js" data-rel-js></script>
   <script src="js/example4.js" data-rel-js></script>
   <script src="js/example5.js" data-rel-js></script>
+
 </body>
 </html>
