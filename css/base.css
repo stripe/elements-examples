@@ -333,8 +333,8 @@ main > .container-lg .cell {
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  -ms-flex: 1 0 calc(50% - 80px);
-  flex: 1 0 calc(50% - 80px);
+  -ms-flex: auto;
+  flex: auto;
   min-width: 100%;
   min-height: 500px;
   padding: 0 40px;
