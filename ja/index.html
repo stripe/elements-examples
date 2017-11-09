@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="ja"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title data-tid="elements_examples.meta.title">Stripe Elements: Build beautiful, smart checkout flows</title>
+  <meta data-tid="elements_examples.meta.description" name="description" content="Build beautiful, smart checkout flows.">
+
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon/180x180.png">
+  <link rel="icon" href="img/apple-touch-icon/180x180.png">
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="../js/index.js" data-rel-js=""></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../css/base.css" data-rel-css="">
+
+  <!-- CSS for each example: -->
+  <link rel="stylesheet" type="text/css" href="../css/example1.css" data-rel-css="">
+  <link rel="stylesheet" type="text/css" href="../css/example2.css" data-rel-css="">
+  <link rel="stylesheet" type="text/css" href="../css/example3.css" data-rel-css="">
+  <link rel="stylesheet" type="text/css" href="../css/example4.css" data-rel-css="">
+  <link rel="stylesheet" type="text/css" href="../css/example5.css" data-rel-css="">
+</head>
+<body>
+  <div class="globalContent">
+    <main>
+    <div class="stripes">
+      <div class="stripe s1"></div>
+      <div class="stripe s2"></div>
+      <div class="stripe s3"></div>
+    </div>
+    <section class="container-lg">
+      <!--Intro-->
+      <div class="cell intro">
+        <ul class="optionList" role="tablist">
+          <li role="tab">
+            <a data-lang="de">
+              Deutsch
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="en">
+              English
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="es">
+              Espa&#xF1;ol
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="fr">
+              Fran&#xE7;ais
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="it">
+              Italiano
+            </a>
+          </li>
+          <li role="tab">
+            <a data-lang="ja">
+              &#x65E5;&#x672C;&#x8A9E;
+            </a>
+          </li>
+        </ul>
+        <h1 data-tid="elements_examples.intro.title" class="common-SuperTitle">Stripe Elements&#x4F7F;&#x7528;&#x4E8B;&#x4F8B;</h1>
+        <p data-tid="elements_examples.intro.subtitle" class="common-IntroText">Stripe Elements &#x306F;&#x3001;&#x6A5F;&#x80FD;&#x8C4A;&#x5BCC;&#x306A;&#x7D44;&#x307F;&#x8FBC;&#x307F;&#x306E; UI &#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3067;&#x3059;&#x3002;&#x3053;&#x308C;&#x3089;&#x306E;&#x30B3;&#x30F3;&#x30DD;&#x30FC;&#x30CD;&#x30F3;&#x30C8;&#x3092;&#x6D3B;&#x7528;&#x3057;&#x3066;&#x3001;&#x30C7;&#x30B9;&#x30AF;&#x30C8;&#x30C3;&#x30D7;&#x3068;&#x30E2;&#x30D0;&#x30A4;&#x30EB;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x305F;&#x72EC;&#x81EA;&#x306E;&#x30D4;&#x30AF;&#x30BB;&#x30EB;&#x30D1;&#x30FC;&#x30D5;&#x30A7;&#x30AF;&#x30C8;&#x306A;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x30A2;&#x30A6;&#x30C8;&#x30D5;&#x30ED;&#x30FC;&#x3092;&#x4F5C;&#x6210;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+        <p class="common-ButtonGroup">
+        <a data-tid="elements_examples.intro.button_learn_more" href="https://stripe.com/elements" class="common-Button common-Button--default">&#x3082;&#x3063;&#x3068;&#x77E5;&#x308A;&#x305F;&#x3044;</a>
+        <a data-tid="elements_examples.intro.button_docs" href="https://stripe.com/docs/stripe-js" class="common-Button" ="elements_docs"="">&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x8AAD;&#x3080;</a>
+      </p></div>
+
+      <!--Example 1-->
+      <div class="cell example example1">
+        <form>
+          <fieldset>
+            <div class="row">
+              <label for="example1-name" data-tid="elements_examples.form.name_label">&#x540D;&#x524D;</label>
+              <input id="example1-name" data-tid="elements_examples.form.name_placeholder" type="text" placeholder="Jane Doe" required>
+            </div>
+            <div class="row">
+              <label for="example1-email" data-tid="elements_examples.form.email_label">E&#x30E1;&#x30FC;&#x30EB;</label>
+              <input id="example1-email" data-tid="elements_examples.form.email_placeholder" type="email" placeholder="taro.yamada@example.com" required>
+            </div>
+            <div class="row">
+              <label for="example1-phone" data-tid="elements_examples.form.phone_label">&#x96FB;&#x8A71;&#x756A;&#x53F7;</label>
+              <input id="example1-phone" data-tid="elements_examples.form.phone_placeholder" type="tel" placeholder="03-1234-5678" required>
+            </div>
+          </fieldset>
+          <fieldset>
+            <div class="row">
+              <div id="example1-card"></div>
+            </div>
+          </fieldset>
+          <button type="submit" data-tid="elements_examples.form.pay_button">&#xA5;2500 &#x306E;&#x652F;&#x6255;&#x3044;</button>
+          <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"/>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"/>
+            </svg>
+            <span class="message"></span></div>
+        </form>
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"/>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="title" data-tid="elements_examples.success.title">&#x652F;&#x6255;&#x3044;&#x51E6;&#x7406;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x5B8C;&#x4E86;</h3>
+          <p class="message"><span data-tid="elements_examples.success.message">Elements &#x3092;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x304D;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x969B;&#x306E;&#x652F;&#x6255;&#x3044;&#x306F;&#x307E;&#x3060;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F; : </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+          <a class="reset" href="#">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="caption">
+          <span data-tid="elements_examples.caption.no_charge" class="no-charge">&#x30AB;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x8ACB;&#x6C42;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</span>
+          <a class="source" href="https://github.com/stripe/elements-examples/#example-1">
+            <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path d="M1,8 L12,8 C12.5522847,8 13,8.44771525 13,9 C13,9.55228475 12.5522847,10 12,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 C-6.76353751e-17,8.44771525 0.44771525,8 1,8 L1,8 Z M1,4 L8,4 C8.55228475,4 9,4.44771525 9,5 C9,5.55228475 8.55228475,6 8,6 L1,6 C0.44771525,6 6.76353751e-17,5.55228475 0,5 C-6.76353751e-17,4.44771525 0.44771525,4 1,4 L1,4 Z M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,1 C16,1.55228475 15.5522847,2 15,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z" fill="#AAB7C4"/>
+            </svg>
+            <span data-tid="elements_examples.caption.view_source"> GitHub &#x3067;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x78BA;&#x8A8D;</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Example 2-->
+      <div class="cell example example2">
+        <form>
+          <div class="row">
+            <div class="field">
+              <input id="example2-address" data-tid="elements_examples.form.address_placeholder" class="input empty" type="text" placeholder="185 Berry St" required>
+              <label for="example2-address" data-tid="elements_examples.form.address_label">&#x4F4F;&#x6240;</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field half-width">
+              <input id="example2-city" data-tid="elements_examples.form.city_placeholder" class="input empty" type="text" placeholder="San Francisco" required>
+              <label for="example2-city" data-tid="elements_examples.form.city_label">&#x5E02;&#x533A;&#x753A;&#x6751;</label>
+              <div class="baseline"></div>
+            </div>
+            <div class="field quarter-width">
+              <input id="example2-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required>
+              <label for="example2-state" data-tid="elements_examples.form.state_label">&#x90FD;&#x9053;&#x5E9C;&#x770C;</label>
+              <div class="baseline"></div>
+            </div>
+            <div class="field quarter-width">
+              <input id="example2-postal-code" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required>
+              <label for="example2-postal-code" data-tid="elements_examples.form.postal_code_label">&#x90F5;&#x4FBF;&#x756A;&#x53F7;</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <div id="example2-card-number" class="input empty"></div>
+              <label for="example2-card-number" data-tid="elements_examples.form.card_number_label">&#x30AB;&#x30FC;&#x30C9;&#x756A;&#x53F7;</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field half-width">
+              <div id="example2-card-expiry" class="input empty"></div>
+              <label for="example2-card-expiry" data-tid="elements_examples.form.card_expiry_label">&#x6709;&#x52B9;&#x671F;&#x9650;</label>
+              <div class="baseline"></div>
+            </div>
+            <div class="field half-width">
+              <div id="example2-card-cvc" class="input empty"></div>
+              <label for="example2-card-cvc" data-tid="elements_examples.form.card_cvc_label">CVC</label>
+              <div class="baseline"></div>
+            </div>
+          </div>
+        <button type="submit" data-tid="elements_examples.form.pay_button">&#xA5;2500 &#x306E;&#x652F;&#x6255;&#x3044;</button>
+          <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"/>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"/>
+            </svg>
+            <span class="message"></span></div>
+        </form>
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"/>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="title" data-tid="elements_examples.success.title">&#x652F;&#x6255;&#x3044;&#x51E6;&#x7406;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x5B8C;&#x4E86;</h3>
+          <p class="message"><span data-tid="elements_examples.success.message">Elements &#x3092;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x304D;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x969B;&#x306E;&#x652F;&#x6255;&#x3044;&#x306F;&#x307E;&#x3060;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F; : </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+          <a class="reset" href="#">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="caption">
+          <span data-tid="elements_examples.caption.no_charge" class="no-charge">&#x30AB;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x8ACB;&#x6C42;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</span>
+          <a class="source" href="https://github.com/stripe/elements-examples/#example-2">
+            <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path d="M1,8 L12,8 C12.5522847,8 13,8.44771525 13,9 C13,9.55228475 12.5522847,10 12,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 C-6.76353751e-17,8.44771525 0.44771525,8 1,8 L1,8 Z M1,4 L8,4 C8.55228475,4 9,4.44771525 9,5 C9,5.55228475 8.55228475,6 8,6 L1,6 C0.44771525,6 6.76353751e-17,5.55228475 0,5 C-6.76353751e-17,4.44771525 0.44771525,4 1,4 L1,4 Z M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,1 C16,1.55228475 15.5522847,2 15,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z" fill="#AAB7C4"/>
+            </svg>
+            <span data-tid="elements_examples.caption.view_source"> GitHub &#x3067;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x78BA;&#x8A8D;</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Example 3-->
+      <div class="cell example example3">
+        <form>
+          <div class="fieldset">
+            <input id="example3-name" data-tid="elements_examples.form.name_label" class="field" type="text" placeholder="&#x540D;&#x524D;" required>
+            <input id="example3-email" data-tid="elements_examples.form.email_label" class="field half-width" type="email" placeholder="E&#x30E1;&#x30FC;&#x30EB;" required>
+            <input id="example3-phone" data-tid="elements_examples.form.phone_label" class="field half-width" type="tel" placeholder="&#x96FB;&#x8A71;&#x756A;&#x53F7;" required>
+          </div>
+          <div class="fieldset">
+            <div id="example3-card-number" class="field empty"></div>
+            <div id="example3-card-expiry" class="field empty third-width"></div>
+            <div id="example3-card-cvc" class="field empty third-width"></div>
+            <div id="example3-card-postal-code" class="field empty third-width"></div>
+          </div>
+          <button type="submit" data-tid="elements_examples.form.pay_button">&#xA5;2500 &#x306E;&#x652F;&#x6255;&#x3044;</button>
+          <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"/>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"/>
+            </svg>
+            <span class="message"></span></div>
+        </form>
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"/>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="title" data-tid="elements_examples.success.title">&#x652F;&#x6255;&#x3044;&#x51E6;&#x7406;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x5B8C;&#x4E86;</h3>
+          <p class="message"><span data-tid="elements_examples.success.message">Elements &#x3092;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x304D;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x969B;&#x306E;&#x652F;&#x6255;&#x3044;&#x306F;&#x307E;&#x3060;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F; : </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+          <a class="reset" href="#">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="caption">
+          <span data-tid="elements_examples.caption.no_charge" class="no-charge">&#x30AB;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x8ACB;&#x6C42;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</span>
+          <a class="source" href="https://github.com/stripe/elements-examples/#example-3">
+            <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path d="M1,8 L12,8 C12.5522847,8 13,8.44771525 13,9 C13,9.55228475 12.5522847,10 12,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 C-6.76353751e-17,8.44771525 0.44771525,8 1,8 L1,8 Z M1,4 L8,4 C8.55228475,4 9,4.44771525 9,5 C9,5.55228475 8.55228475,6 8,6 L1,6 C0.44771525,6 6.76353751e-17,5.55228475 0,5 C-6.76353751e-17,4.44771525 0.44771525,4 1,4 L1,4 Z M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,1 C16,1.55228475 15.5522847,2 15,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z" fill="#AAB7C4"/>
+            </svg>
+            <span data-tid="elements_examples.caption.view_source"> GitHub &#x3067;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x78BA;&#x8A8D;</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Example 4-->
+      <div class="cell example example4">
+        <form>
+          <div id="example4-paymentRequest">
+            <!--Stripe paymentRequestButton Element inserted here-->
+          </div>
+          <fieldset>
+            <legend class="card-only" data-tid="elements_examples.form.pay_with_card">&#x30AB;&#x30FC;&#x30C9;&#x3067;&#x652F;&#x6255;&#x3044;</legend>
+            <legend class="payment-request-available" data-tid="elements_examples.form.enter_card_manually">&#x307E;&#x305F;&#x306F;&#x30AB;&#x30FC;&#x30C9;&#x60C5;&#x5831;&#x3092;&#x5165;&#x529B;</legend>
+            <div class="container">
+              <div id="example4-card"></div>
+              <button type="submit" data-tid="elements_examples.form.donate_button">&#x652F;&#x6255;&#x3046;</button>
+            </div>
+          </fieldset>
+          <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"/>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"/>
+            </svg>
+            <span class="message"></span></div>
+        </form>
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"/>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="title" data-tid="elements_examples.success.title">&#x652F;&#x6255;&#x3044;&#x51E6;&#x7406;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x5B8C;&#x4E86;</h3>
+          <p class="message"><span data-tid="elements_examples.success.message">Elements &#x3092;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x304D;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x969B;&#x306E;&#x652F;&#x6255;&#x3044;&#x306F;&#x307E;&#x3060;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F; : </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+          <a class="reset" href="#">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="caption">
+          <span data-tid="elements_examples.caption.no_charge" class="no-charge">&#x30AB;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x8ACB;&#x6C42;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</span>
+          <a class="source" href="https://github.com/stripe/elements-examples/#example-4">
+            <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path d="M1,8 L12,8 C12.5522847,8 13,8.44771525 13,9 C13,9.55228475 12.5522847,10 12,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 C-6.76353751e-17,8.44771525 0.44771525,8 1,8 L1,8 Z M1,4 L8,4 C8.55228475,4 9,4.44771525 9,5 C9,5.55228475 8.55228475,6 8,6 L1,6 C0.44771525,6 6.76353751e-17,5.55228475 0,5 C-6.76353751e-17,4.44771525 0.44771525,4 1,4 L1,4 Z M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,1 C16,1.55228475 15.5522847,2 15,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z" fill="#AAB7C4"/>
+            </svg>
+            <span data-tid="elements_examples.caption.view_source"> GitHub &#x3067;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x78BA;&#x8A8D;</span>
+          </a>
+        </div>
+      </div>
+
+      <!--Example 5-->
+      <div class="cell example example5">
+        <form>
+          <div id="example5-paymentRequest">
+            <!--Stripe paymentRequestButton Element inserted here-->
+          </div>
+          <fieldset>
+            <legend class="card-only" data-tid="elements_examples.form.pay_with_card">&#x30AB;&#x30FC;&#x30C9;&#x3067;&#x652F;&#x6255;&#x3044;</legend>
+            <legend class="payment-request-available" data-tid="elements_examples.form.enter_card_manually">&#x307E;&#x305F;&#x306F;&#x30AB;&#x30FC;&#x30C9;&#x60C5;&#x5831;&#x3092;&#x5165;&#x529B;</legend>
+            <div class="row">
+              <div class="field">
+                <label for="example5-name" data-tid="elements_examples.form.name_label">&#x540D;&#x524D;</label>
+                <input id="example5-name" data-tid="elements_examples.form.name_placeholder" class="input" type="text" placeholder="Jane Doe" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="example5-email" data-tid="elements_examples.form.email_label">E&#x30E1;&#x30FC;&#x30EB;</label>
+                <input id="example5-email" data-tid="elements_examples.form.email_placeholder" class="input" type="text" placeholder="taro.yamada@example.com" required>
+              </div>
+              <div class="field">
+                <label for="example5-phone" data-tid="elements_examples.form.phone_label">&#x96FB;&#x8A71;&#x756A;&#x53F7;</label>
+                <input id="example5-phone" data-tid="elements_examples.form.phone_placeholder" class="input" type="text" placeholder="03-1234-5678" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="example5-address" data-tid="elements_examples.form.address_label">&#x4F4F;&#x6240;</label>
+                <input id="example5-address" data-tid="elements_examples.form.address_placeholder" class="input" type="text" placeholder="185 Berry St" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="example5-city" data-tid="elements_examples.form.city_label">&#x5E02;&#x533A;&#x753A;&#x6751;</label>
+                <input id="example5-city" data-tid="elements_examples.form.city_placeholder" class="input" type="text" placeholder="San Francisco" required>
+              </div>
+              <div class="field">
+                <label for="example5-country" data-tid="elements_examples.form.country_label">&#x56FD;</label>
+                <select id="example5-country" class="input">
+                  <option selected="selected" value="US" data-tid="elements_examples.form.country_placeholder">United States</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="field">
+                <label for="example5-card" data-tid="elements_examples.form.card_label">&#x30AB;&#x30FC;&#x30C9;</label>
+                <div id="example5-card" class="input"></div>
+              </div>
+            </div>
+            <button type="submit" data-tid="elements_examples.form.pay_button">&#xA5;2500 &#x306E;&#x652F;&#x6255;&#x3044;</button>
+          </fieldset>
+          <div class="error" role="alert"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path class="base" fill="#000" d="M8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 Z"/>
+              <path class="glyph" fill="#FFF" d="M8.5,7.29791847 L6.12604076,4.92395924 C5.79409512,4.59201359 5.25590488,4.59201359 4.92395924,4.92395924 C4.59201359,5.25590488 4.59201359,5.79409512 4.92395924,6.12604076 L7.29791847,8.5 L4.92395924,10.8739592 C4.59201359,11.2059049 4.59201359,11.7440951 4.92395924,12.0760408 C5.25590488,12.4079864 5.79409512,12.4079864 6.12604076,12.0760408 L8.5,9.70208153 L10.8739592,12.0760408 C11.2059049,12.4079864 11.7440951,12.4079864 12.0760408,12.0760408 C12.4079864,11.7440951 12.4079864,11.2059049 12.0760408,10.8739592 L9.70208153,8.5 L12.0760408,6.12604076 C12.4079864,5.79409512 12.4079864,5.25590488 12.0760408,4.92395924 C11.7440951,4.59201359 11.2059049,4.59201359 10.8739592,4.92395924 L8.5,7.29791847 L8.5,7.29791847 Z"/>
+            </svg>
+            <span class="message"></span></div>
+        </form>
+        <div class="success">
+          <div class="icon">
+            <svg width="84px" height="84px" viewBox="0 0 84 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <circle class="border" cx="42" cy="42" r="40" stroke-linecap="round" stroke-width="4" stroke="#000" fill="none"/>
+              <path class="checkmark" stroke-linecap="round" stroke-linejoin="round" d="M23.375 42.5488281 36.8840688 56.0578969 64.891932 28.0500338" stroke-width="4" stroke="#000" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="title" data-tid="elements_examples.success.title">&#x652F;&#x6255;&#x3044;&#x51E6;&#x7406;&#x304C;&#x6B63;&#x5E38;&#x306B;&#x5B8C;&#x4E86;</h3>
+          <p class="message"><span data-tid="elements_examples.success.message">Elements &#x3092;&#x304A;&#x8A66;&#x3057;&#x3044;&#x305F;&#x3060;&#x304D;&#x3042;&#x308A;&#x304C;&#x3068;&#x3046;&#x3054;&#x3056;&#x3044;&#x307E;&#x3059;&#x3002;&#x5B9F;&#x969B;&#x306E;&#x652F;&#x6255;&#x3044;&#x306F;&#x307E;&#x3060;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x304C;&#x751F;&#x6210;&#x3055;&#x308C;&#x307E;&#x3057;&#x305F; : </span><span class="token">tok_189gMN2eZvKYlo2CwTBv9KKh</span></p>
+          <a class="reset" href="#">
+            <svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path fill="#000000" d="M15,7.05492878 C10.5000495,7.55237307 7,11.3674463 7,16 C7,20.9705627 11.0294373,25 16,25 C20.9705627,25 25,20.9705627 25,16 C25,15.3627484 24.4834055,14.8461538 23.8461538,14.8461538 C23.2089022,14.8461538 22.6923077,15.3627484 22.6923077,16 C22.6923077,19.6960595 19.6960595,22.6923077 16,22.6923077 C12.3039405,22.6923077 9.30769231,19.6960595 9.30769231,16 C9.30769231,12.3039405 12.3039405,9.30769231 16,9.30769231 L16,12.0841673 C16,12.1800431 16.0275652,12.2738974 16.0794108,12.354546 C16.2287368,12.5868311 16.5380938,12.6540826 16.7703788,12.5047565 L22.3457501,8.92058924 L22.3457501,8.92058924 C22.4060014,8.88185624 22.4572275,8.83063012 22.4959605,8.7703788 C22.6452866,8.53809377 22.5780351,8.22873685 22.3457501,8.07941076 L22.3457501,8.07941076 L16.7703788,4.49524351 C16.6897301,4.44339794 16.5958758,4.41583275 16.5,4.41583275 C16.2238576,4.41583275 16,4.63969037 16,4.91583275 L16,7 L15,7 L15,7.05492878 Z M16,32 C7.163444,32 0,24.836556 0,16 C0,7.163444 7.163444,0 16,0 C24.836556,0 32,7.163444 32,16 C32,24.836556 24.836556,32 16,32 Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="caption">
+          <span data-tid="elements_examples.caption.no_charge" class="no-charge">&#x30AB;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x8ACB;&#x6C42;&#x3055;&#x308C;&#x307E;&#x305B;&#x3093;</span>
+          <a class="source" href="https://github.com/stripe/elements-examples/#example-5">
+            <svg width="16px" height="10px" viewBox="0 0 16 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+              <path d="M1,8 L12,8 C12.5522847,8 13,8.44771525 13,9 C13,9.55228475 12.5522847,10 12,10 L1,10 C0.44771525,10 6.76353751e-17,9.55228475 0,9 C-6.76353751e-17,8.44771525 0.44771525,8 1,8 L1,8 Z M1,4 L8,4 C8.55228475,4 9,4.44771525 9,5 C9,5.55228475 8.55228475,6 8,6 L1,6 C0.44771525,6 6.76353751e-17,5.55228475 0,5 C-6.76353751e-17,4.44771525 0.44771525,4 1,4 L1,4 Z M1,0 L15,0 C15.5522847,-1.01453063e-16 16,0.44771525 16,1 L16,1 C16,1.55228475 15.5522847,2 15,2 L1,2 C0.44771525,2 6.76353751e-17,1.55228475 0,1 L0,1 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 L1,0 Z" fill="#AAB7C4"/>
+            </svg>
+            <span data-tid="elements_examples.caption.view_source"> GitHub &#x3067;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x306E;&#x78BA;&#x8A8D;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <a href="https://github.com/stripe/elements-examples" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#6772e5; color:#f6f9fc; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    </main>
+  </div>
+
+  <!-- Simple localization script for Stripe's examples page. -->
+  <script src="../js/l10n.js" data-rel-js=""></script>
+
+  <!-- Scripts for each example: -->
+  <script src="../js/example1.js" data-rel-js=""></script>
+  <script src="../js/example2.js" data-rel-js=""></script>
+  <script src="../js/example3.js" data-rel-js=""></script>
+  <script src="../js/example4.js" data-rel-js=""></script>
+  <script src="../js/example5.js" data-rel-js=""></script>
+
+
+
+</body></html>
