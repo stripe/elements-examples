@@ -27,7 +27,9 @@ The form also collects address (and thus postal code) outside of the payment for
 - [JavaScript](js/example3.js)
 - [CSS](css/example3.css)
 
-Example 3 shows a form that uses individual `cardNumber`, `cardExpiry`, `cardCvc`, and `postalCode` Elements with a custom web font.
+Example 3 shows a form that uses individual `cardNumber`, `cardExpiry`, and `cardCvc` Elements with a custom web font.
+
+The form also collects postal code outside of the payment form.
 
 ## Example 4
 
