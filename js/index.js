@@ -36,7 +36,6 @@ function registerElements(elements, exampleName) {
   // Listen for errors from each Element, and show error messages in the UI.
   var savedErrors = {};
   elements.forEach(function(element, idx) {
-    savedErrors[idx] = null;
     element.on('change', function(event) {
       if (event.error) {
         error.classList.add('visible');
@@ -45,13 +44,16 @@ function registerElements(elements, exampleName) {
       } else {
         savedErrors[idx] = null;
 
-        var maybeError = Object.keys(savedErrors).reduce(function(acc, key) {
-          return savedErrors[key] || acc;
-        }, null);
+        // Loop over the saved errors and find the last one, if any.
+        var nextError = Object.keys(savedErrors)
+          .sort()
+          .reduce(function(maybeFoundError, key) {
+            return savedErrors[key] || maybeFoundError;
+          }, null);
 
-        if (maybeError) {
+        if (nextError) {
           // Now that they've fixed the current error, show another one.
-          errorMessage.innerText = maybeError;
+          errorMessage.innerText = nextError;
         } else {
           // The user fixed the last error; no more errors.
           error.classList.remove('visible');
