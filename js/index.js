@@ -44,11 +44,11 @@ function registerElements(elements, exampleName) {
       } else {
         savedErrors[idx] = null;
 
-        // Loop over the saved errors and find the last one, if any.
+        // Loop over the saved errors and find the first one, if any.
         var nextError = Object.keys(savedErrors)
           .sort()
           .reduce(function(maybeFoundError, key) {
-            return savedErrors[key] || maybeFoundError;
+            return maybeFoundError || savedErrors[key];
           }, null);
 
         if (nextError) {
