@@ -34,13 +34,28 @@ function registerElements(elements, exampleName) {
   }
 
   // Listen for errors from each Element, and show error messages in the UI.
-  elements.forEach(function(element) {
+  var savedErrors = {};
+  elements.forEach(function(element, idx) {
+    savedErrors[idx] = null;
     element.on('change', function(event) {
       if (event.error) {
         error.classList.add('visible');
+        savedErrors[idx] = event.error.message;
         errorMessage.innerText = event.error.message;
       } else {
-        error.classList.remove('visible');
+        savedErrors[idx] = null;
+
+        var maybeError = Object.keys(savedErrors).reduce(function(acc, key) {
+          return savedErrors[key] || acc;
+        }, null);
+
+        if (maybeError) {
+          // Now that they've fixed the current error, show another one.
+          errorMessage.innerText = maybeError;
+        } else {
+          // The user fixed the last error; no more errors.
+          error.classList.remove('visible');
+        }
       }
     });
   });
