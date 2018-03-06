@@ -33,6 +33,17 @@ function registerElements(elements, exampleName) {
     );
   }
 
+  function triggerBrowserValidation() {
+    // The only way to trigger HTML5 form validation UI is to fake a user submit
+    // event.
+    var submit = document.createElement('input');
+    submit.type = 'submit';
+    submit.style.display = 'none';
+    form.appendChild(submit);
+    submit.click();
+    submit.remove();
+  }
+
   // Listen for errors from each Element, and show error messages in the UI.
   var savedErrors = {};
   elements.forEach(function(element, idx) {
@@ -65,6 +76,22 @@ function registerElements(elements, exampleName) {
   // Listen on the form's 'submit' handler...
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+
+    // Trigger HTML5 validation UI on the form if any of the inputs fail
+    // validation.
+    var plainInputsValid = true;
+    Array.prototype.forEach.call(form.querySelectorAll('input'), function(
+      input
+    ) {
+      if (input.checkValidity && !input.checkValidity()) {
+        plainInputsValid = false;
+        return;
+      }
+    });
+    if (!plainInputsValid) {
+      triggerBrowserValidation();
+      return;
+    }
 
     // Show a loading screen...
     example.classList.add('submitting');
