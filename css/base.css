@@ -383,9 +383,9 @@ main > .container-lg .example {
   align-items: center;
   border-radius: 4px;
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
-  padding: 80px 10px;
-  margin-left: -10px;
-  margin-right: -10px;
+  padding: 80px 0px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 @media (min-width: 670px) {
