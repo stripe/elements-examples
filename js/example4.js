@@ -22,7 +22,7 @@
         color: "#32325D",
         fontWeight: 500,
         fontFamily: "Inter UI, Open Sans, Segoe UI, sans-serif",
-        fontSize: "15px",
+        fontSize: "16px",
         fontSmoothing: "antialiased",
 
         "::placeholder": {
