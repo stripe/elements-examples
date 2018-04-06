@@ -21,7 +21,7 @@
         color: '#fff',
         fontWeight: 500,
         fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
-        fontSize: '15px',
+        fontSize: '16px',
         fontSmoothing: 'antialiased',
 
         ':-webkit-autofill': {
