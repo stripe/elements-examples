@@ -19,7 +19,7 @@
         color: "#fff",
         fontWeight: 400,
         fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
-        fontSize: "15px",
+        fontSize: "16px",
         fontSmoothing: "antialiased",
 
         "::placeholder": {
