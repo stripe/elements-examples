@@ -76,20 +76,20 @@
       </p></div>
 
       <!--Example 1-->
-      <div class="cell example example1">
+      <div class="cell example example1" id="example-1">
         <form>
           <fieldset>
             <div class="row">
               <label for="example1-name" data-tid="elements_examples.form.name_label">Name</label>
-              <input id="example1-name" data-tid="elements_examples.form.name_placeholder" type="text" placeholder="Jane Doe" required>
+              <input id="example1-name" data-tid="elements_examples.form.name_placeholder" type="text" placeholder="Jane Doe" required autocomplete="name">
             </div>
             <div class="row">
               <label for="example1-email" data-tid="elements_examples.form.email_label">Email</label>
-              <input id="example1-email" data-tid="elements_examples.form.email_placeholder" type="email" placeholder="janedoe@gmail.com" required>
+              <input id="example1-email" data-tid="elements_examples.form.email_placeholder" type="email" placeholder="janedoe@gmail.com" required autocomplete="email">
             </div>
             <div class="row">
               <label for="example1-phone" data-tid="elements_examples.form.phone_label">Phone</label>
-              <input id="example1-phone" data-tid="elements_examples.form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required>
+              <input id="example1-phone" data-tid="elements_examples.form.phone_placeholder" type="tel" placeholder="(941) 555-0123" required autocomplete="tel">
             </div>
           </fieldset>
           <fieldset>
@@ -132,29 +132,29 @@
       </div>
 
       <!--Example 2-->
-      <div class="cell example example2">
+      <div class="cell example example2" id="example-2">
         <form>
           <div data-locale-reversible="">
             <div class="row">
               <div class="field">
-                <input id="example2-address" data-tid="elements_examples.form.address_placeholder" class="input empty" type="text" placeholder="185 Berry St" required>
+                <input id="example2-address" data-tid="elements_examples.form.address_placeholder" class="input empty" type="text" placeholder="185 Berry St" required autocomplete="address-line1">
                 <label for="example2-address" data-tid="elements_examples.form.address_label">Address</label>
                 <div class="baseline"></div>
               </div>
             </div>
             <div class="row" data-locale-reversible="">
               <div class="field half-width">
-                <input id="example2-city" data-tid="elements_examples.form.city_placeholder" class="input empty" type="text" placeholder="San Francisco" required>
+                <input id="example2-city" data-tid="elements_examples.form.city_placeholder" class="input empty" type="text" placeholder="San Francisco" required autocomplete="address-level2">
                 <label for="example2-city" data-tid="elements_examples.form.city_label">City</label>
                 <div class="baseline"></div>
               </div>
               <div class="field quarter-width">
-                <input id="example2-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required>
+                <input id="example2-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required autocomplete="address-level1">
                 <label for="example2-state" data-tid="elements_examples.form.state_label">State</label>
                 <div class="baseline"></div>
               </div>
               <div class="field quarter-width">
-                <input id="example2-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required>
+                <input id="example2-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required autocomplete="postal-code">
                 <label for="example2-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
                 <div class="baseline"></div>
               </div>
@@ -214,12 +214,12 @@
       </div>
 
       <!--Example 3-->
-      <div class="cell example example3">
+      <div class="cell example example3" id="example-3">
         <form>
           <div class="fieldset">
-            <input id="example3-name" data-tid="elements_examples.form.name_label" class="field" type="text" placeholder="Name" required>
-            <input id="example3-email" data-tid="elements_examples.form.email_label" class="field half-width" type="email" placeholder="Email" required>
-            <input id="example3-phone" data-tid="elements_examples.form.phone_label" class="field half-width" type="tel" placeholder="Phone" required>
+            <input id="example3-name" data-tid="elements_examples.form.name_label" class="field" type="text" placeholder="Name" required autocomplete="name">
+            <input id="example3-email" data-tid="elements_examples.form.email_label" class="field half-width" type="email" placeholder="Email" required autocomplete="email">
+            <input id="example3-phone" data-tid="elements_examples.form.phone_label" class="field half-width" type="tel" placeholder="Phone" required autocomplete="tel">
           </div>
           <div class="fieldset">
             <div id="example3-card-number" class="field empty"></div>
@@ -262,7 +262,7 @@
       </div>
 
       <!--Example 4-->
-      <div class="cell example example4">
+      <div class="cell example example4" id="example-4">
         <form>
           <div id="example4-paymentRequest">
             <!--Stripe paymentRequestButton Element inserted here-->
@@ -309,7 +309,7 @@
       </div>
 
       <!--Example 5-->
-      <div class="cell example example5">
+      <div class="cell example example5" id="example-5">
         <form>
           <div id="example5-paymentRequest">
             <!--Stripe paymentRequestButton Element inserted here-->
@@ -320,38 +320,38 @@
             <div class="row">
               <div class="field">
                 <label for="example5-name" data-tid="elements_examples.form.name_label">Name</label>
-                <input id="example5-name" data-tid="elements_examples.form.name_placeholder" class="input" type="text" placeholder="Jane Doe" required>
+                <input id="example5-name" data-tid="elements_examples.form.name_placeholder" class="input" type="text" placeholder="Jane Doe" required autocomplete="name">
               </div>
             </div>
             <div class="row">
               <div class="field">
                 <label for="example5-email" data-tid="elements_examples.form.email_label">Email</label>
-                <input id="example5-email" data-tid="elements_examples.form.email_placeholder" class="input" type="text" placeholder="janedoe@gmail.com" required>
+                <input id="example5-email" data-tid="elements_examples.form.email_placeholder" class="input" type="text" placeholder="janedoe@gmail.com" required autocomplete="email">
               </div>
               <div class="field">
                 <label for="example5-phone" data-tid="elements_examples.form.phone_label">Phone</label>
-                <input id="example5-phone" data-tid="elements_examples.form.phone_placeholder" class="input" type="text" placeholder="(941) 555-0123" required>
+                <input id="example5-phone" data-tid="elements_examples.form.phone_placeholder" class="input" type="text" placeholder="(941) 555-0123" required autocomplete="tel">
               </div>
             </div>
             <div data-locale-reversible="">
               <div class="row">
                 <div class="field">
                   <label for="example5-address" data-tid="elements_examples.form.address_label">Address</label>
-                  <input id="example5-address" data-tid="elements_examples.form.address_placeholder" class="input" type="text" placeholder="185 Berry St" required>
+                  <input id="example5-address" data-tid="elements_examples.form.address_placeholder" class="input" type="text" placeholder="185 Berry St" required autocomplete="address-line1">
                 </div>
               </div>
               <div class="row" data-locale-reversible="">
                 <div class="field">
                   <label for="example5-city" data-tid="elements_examples.form.city_label">City</label>
-                  <input id="example5-city" data-tid="elements_examples.form.city_placeholder" class="input" type="text" placeholder="San Francisco" required>
+                  <input id="example5-city" data-tid="elements_examples.form.city_placeholder" class="input" type="text" placeholder="San Francisco" required autocomplete="address-level2">
                 </div>
                 <div class="field">
                   <label for="example5-state" data-tid="elements_examples.form.state_label">State</label>
-                  <input id="example5-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required>
+                  <input id="example5-state" data-tid="elements_examples.form.state_placeholder" class="input empty" type="text" placeholder="CA" required autocomplete="address-level1">
                 </div>
                 <div class="field">
                   <label for="example5-zip" data-tid="elements_examples.form.postal_code_label">ZIP</label>
-                  <input id="example5-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required>
+                  <input id="example5-zip" data-tid="elements_examples.form.postal_code_placeholder" class="input empty" type="text" placeholder="94107" required autocomplete="postal-code">
                 </div>
               </div>
             </div>
