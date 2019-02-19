@@ -1,8 +1,8 @@
 // Simple localization
-const isGithubPages = window.location.hostname === 'stripe.github.io';
-const localeIndex = isGithubPages ? 2 : 1;
+const isStripeDev = window.location.hostname === 'stripe.dev';
+const localeIndex = isStripeDev ? 2 : 1;
 window.__exampleLocale = window.location.pathname.split('/')[localeIndex] || 'en';
-const urlPrefix = isGithubPages ? '/elements-examples/' : '/';
+const urlPrefix = isStripeDev ? '/elements-examples/' : '/';
 
 document.querySelectorAll('.optionList a').forEach(function(langNode) {
   const langValue = langNode.getAttribute('data-lang');
