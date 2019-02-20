@@ -1,5 +1,5 @@
 // Simple localization
-const isGithubPages = window.location.hostname === 'stripe.github.io';
+const isGithubPages = window.location.hostname === 'stripe.dev';
 const localeIndex = isGithubPages ? 2 : 1;
 window.__exampleLocale = window.location.pathname.split('/')[localeIndex] || 'en';
 const urlPrefix = isGithubPages ? '/elements-examples/' : '/';
