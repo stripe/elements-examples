@@ -164,10 +164,6 @@
   cursor: pointer;
 }
 
-.example.example2 input:active {
-  background-color: #159570;
-}
-
 .example.example2 .error svg {
   margin-top: 0 !important;
 }
