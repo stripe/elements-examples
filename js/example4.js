@@ -4,7 +4,7 @@
   var elements = stripe.elements({
     fonts: [
       {
-        cssSrc: "https://rsms.me/inter/inter-ui.css"
+        cssSrc: "https://rsms.me/inter/inter.css"
       }
     ],
     // Stripe's examples are localized to specific languages, but if
@@ -21,7 +21,7 @@
       base: {
         color: "#32325D",
         fontWeight: 500,
-        fontFamily: "Inter UI, Open Sans, Segoe UI, sans-serif",
+        fontFamily: "Inter, Open Sans, Segoe UI, sans-serif",
         fontSize: "16px",
         fontSmoothing: "antialiased",
 
