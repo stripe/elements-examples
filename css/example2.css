@@ -50,6 +50,7 @@
   white-space: nowrap;
   transform-origin: 0 50%;
   cursor: text;
+  pointer-events: none;
   transition-property: color, transform;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
