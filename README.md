@@ -6,7 +6,7 @@ This repository contains examples of stylish forms that use Stripe Elements. The
 
 ## Need help with Elements?
 
-- Get started with Stripe Elements by [reading our quickstart guide](https://stripe.com/docs/stripe-js/elements/quickstart).
+- Get started with Stripe Elements by [reading our quickstart guide](https://stripe.com/docs/stripe-js).
 - For help with Elements and your Stripe integration in general, please [contact Stripe Support](https://support.stripe.com/).
 
 
