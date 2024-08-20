@@ -1,7 +1,8 @@
 // Simple localization
 const isGithubPages = (window.location.hostname === 'stripe.dev') || 
                       (window.location.hostname === 'stripe.github.io') ||
-                      window.location.hostname.endsWith('.vercel.app');
+                      window.location.hostname.endsWith('.vercel.app') ||
+                      window.location.hostname.endsWith('.vercelapp.stripe.dev');
 const localeIndex = isGithubPages ? 2 : 1;
 window.__exampleLocale = window.location.pathname.split('/')[localeIndex] || 'en';
 const urlPrefix = isGithubPages ? '/elements-examples/' : '/';
